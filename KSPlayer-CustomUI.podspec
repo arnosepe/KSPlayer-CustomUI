@@ -42,29 +42,29 @@ Pod::Spec.new do |s|
         ss.source_files = 'Sources/KSPlayer/MEPlayer/**/*.{swift}'
         ss.frameworks  = 'AudioToolbox', 'VideoToolbox'
         ss.dependency 'FFmpegKit'
-        ss.dependency 'KSPlayer/AVPlayer'
-        ss.dependency 'KSPlayer/Metal'
-        ss.dependency 'KSPlayer/Subtitle'
+        ss.dependency 'KSPlayer-CustomUI/AVPlayer'
+        ss.dependency 'KSPlayer-CustomUI/Metal'
+        ss.dependency 'KSPlayer-CustomUI/Subtitle'
     end
   
     s.subspec 'Core' do |ss|
         ss.source_files = 'Sources/KSPlayer/Core/*'
-        ss.dependency 'KSPlayer/AVPlayer'
+        ss.dependency 'KSPlayer-CustomUI/AVPlayer'
     end
 
     s.subspec 'SwiftUI'do |ss|
         ss.source_files = 'Sources/KSPlayer/SwiftUI/*.swift'
-        ss.dependency 'KSPlayer/AVPlayer'
+        ss.dependency 'KSPlayer-CustomUI/AVPlayer'
     end
 
     s.subspec 'Audio'do |ss|
         ss.source_files = 'Sources/KSPlayer/Audio/*.swift'
-        ss.dependency 'KSPlayer/Core'
+        ss.dependency 'KSPlayer-CustomUI/Core'
     end
     s.subspec 'Video' do |ss|
         ss.source_files = 'Sources/KSPlayer/Video/*.swift'
-        ss.dependency 'KSPlayer/Core'
-        ss.dependency 'KSPlayer/Subtitle'
+        ss.dependency 'KSPlayer-CustomUI/Core'
+        ss.dependency 'KSPlayer-CustomUI/Subtitle'
     end
     s.test_spec 'Tests' do |test_spec|
         test_spec.source_files = 'Tests/KSPlayerTests/*.swift'
