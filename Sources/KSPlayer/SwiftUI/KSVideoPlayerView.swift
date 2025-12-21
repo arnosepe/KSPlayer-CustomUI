@@ -368,7 +368,7 @@ struct VideoControllerView: View {
             #if os(tvOS)
             Spacer()
             HStack {
-                Text(title)
+                Text("-\(title)")
                     .lineLimit(2)
                     .layoutPriority(3)
                 ProgressView()
